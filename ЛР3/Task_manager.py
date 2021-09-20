@@ -13,7 +13,7 @@ print(help1)
 dec1()
 
 while True:
-    # Here code takes an raw input as a string, and converts it in lowercase
+    # Here code takes an raw input as a string, and convert it in lowercase
 
     userinputraw = str(input())
 
