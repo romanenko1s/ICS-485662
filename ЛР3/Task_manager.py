@@ -1,6 +1,6 @@
 # This program invented to organize your tasks
 
-#Here goes the help info about code
+# Here goes the help info about code
 
 help1 = 'Hello, this is an interactive task manager.\nYou can add, view and delete your tasks, so you can use it as your daily list.\nYou can get help and additional info, by typing "help".'
 help2 = 'Here is a command list:\n1."Add task" - adds task to your task list\n2."My tasks" - prints all your tasks into the command line\n3."Clear list" - deletes all your tasks\n4."Help" - get a help menu and all additional info\n5."Commands" - gets only list of commands'
@@ -21,7 +21,7 @@ while True:
     if userinput == "exit":
         break
     
-    # Feom here we startinvg to work with data file
+    # From here we startinvg to work with data file
 
     try:    
         # Here we add new tasks to data file
@@ -49,7 +49,7 @@ while True:
                     if line != "\n":
                         line_count += 1
                 
-                if line_count > 1:
+                if line_count == 1:
                     print("Printing your tasks...\n")
 
                     for line in file_tasklistreadmode:
@@ -61,7 +61,7 @@ while True:
                 file_tasklist.close()
                     
             except:
-                print("Error ocured during printing from data file")
+                print("Error ocured during printing from data file\nOr maybe, you just have no tasks")
 
         #Here we clear the data file
 
