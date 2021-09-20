@@ -9,4 +9,4 @@ while True:
     if input2 == "*":
         print(input1 * input3)
     if input2 == "/":
-        print(int(input1 / input3))
+        print(input1 / input3)
