@@ -25,84 +25,75 @@ while True:
     if userinput == "exit":
         break
     
-    # From here we startinvg to work with data file
-
-    try:    
-        # Here we add new tasks to data file
-
-        if userinput == "add task":
-            dec1()
-            print("What task is it?")
-            
-            newtaskinput = (str(input())+"\n")
-            
-            file_tasklist = open("tasklistdata", "a+")
-            file_tasklist.write(newtaskinput)
-            file_tasklist.close()
-
-            print("Task added")
-            dec1()
-
-        # Here we print tasks 
-
-        if userinput == "my tasks":
-            try:
-                dec1()
-                file_tasklist = open("tasklistdata", "r")
-                file_tasklistreadmode = file_tasklist.readlines()
-
-                line_count = 0
-                for line in file_tasklistreadmode:
-                    if line != "\n":
-                        line_count += 1
-                
-                if line_count == 1:
-                    print("Printing your tasks...\n")
-
-                    for line in file_tasklistreadmode:
-                        print("#  "+line.capitalize())
-                        
-                else:
-                    print("You have no task")
-
-                file_tasklist.close()
-                    
-            except:
-                print("Error ocured during printing from data file\nOr maybe, you just have no tasks")
-
-            finally:
-                dec1()
-
-        #Here we clear the data file
-
-        if userinput == "clear list":
-            print("You want to clear your task, confirm your action?")
-            clearlistinput = lowercase(str(input("y/n")))
-
-            if clearlistinput == "y":
-                try:
-                    file_tasklist = open("tasklistdata", "w")
-                    file_tasklist.close()
-                    print("Data has been deleted")
-
-                except:
-                    print("Error ocured during data earising")
-            
-            else:
-                print("Action canceled")
-
-            dec1()
-            print("")
-            dec1()
-
-        if userinput == "help":
-            print(help1+"\n\n"+help2+"\n\n"+help3)
-            dec1()
-
-        if userinput == "commands":
-            print(help2)
-            dec1()
-
-    except:
-        print("Error ocured during opening a data file")
+    if userinput == "add task":
+        dec1()
+        print("What task is it?")
+        
+        newtaskinput = (str(input())+"\n")
+        
+        file_tasklist = open("tasklistdata", "a+")
+        file_tasklist.write(newtaskinput)
         file_tasklist.close()
+
+        print("Task added")
+        dec1()
+
+    # Here we print tasks 
+
+    if userinput == "my tasks":
+        try:
+            dec1()
+            file_tasklist = open("tasklistdata", "r")
+            file_tasklistreadmode = file_tasklist.readlines()
+
+            line_count = 0
+            for line in file_tasklistreadmode:
+                if line != "\n":
+                    line_count += 1
+            
+            if line_count == 1:
+                print("Printing your tasks...\n")
+
+                for line in file_tasklistreadmode:
+                    print("#  "+line.capitalize())
+                    
+            else:
+                print("You have no task")
+
+            file_tasklist.close()
+                
+        except:
+            print("Error ocured during printing from data file\nOr maybe, you just have no tasks")
+
+        finally:
+            dec1()
+
+    #Here we clear the data file
+
+    if userinput == "clear list":
+        print("You want to clear your task, confirm your action?")
+        clearlistinput = lowercase(str(input("y/n")))
+
+        if clearlistinput == "y":
+            try:
+                file_tasklist = open("tasklistdata", "w")
+                file_tasklist.close()
+                print("Data has been deleted")
+
+            except:
+                print("Error ocured during data earising")
+        
+        else:
+            print("Action canceled")
+
+        dec1()
+        print("")
+        dec1()
+
+    if userinput == "help":
+        print(help1+"\n\n"+help2+"\n\n"+help3)
+        dec1()
+
+    if userinput == "commands":
+        print(help2)
+        dec1()
