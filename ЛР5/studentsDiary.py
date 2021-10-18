@@ -33,3 +33,4 @@ while True:
 
         line = open(filePath).readlines()[row1]
         print("#  "+line)
+        print("Row "+row1+" printed")
