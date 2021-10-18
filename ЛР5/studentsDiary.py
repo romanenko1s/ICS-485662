@@ -1,3 +1,7 @@
+import os
+
+file0 = "studentListData.txt"
+
 while True:
 
     userInput = str(input())
@@ -6,7 +10,7 @@ while True:
         break
 
     if userInput == "1":
-        file1 = open("studentListData.txt", "r")
+        file1 = open(file0, "r")
         file2 = file1.readlines()
 
         for line in file2:
@@ -19,7 +23,7 @@ while True:
 
         newData = (str(input())+"\n")
 
-        file1 = open("studentListData.txt", "a+")
+        file1 = open(file0, "a+")
         file1.write(newData)
         file1.close()
 
@@ -29,5 +33,9 @@ while True:
         print("What row to print?")
         row1 = int(input())
 
-        line = open("studentListData.txt").readlines()[row1]
+        line = open(file0).readlines()[row1]
         print("#  "+line)
+
+    if userInput == "4":
+        for file0 in os.listdir(""):
+            print(file0)
