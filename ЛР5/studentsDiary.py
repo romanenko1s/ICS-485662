@@ -34,3 +34,7 @@ while True:
         line = open(filePath).readlines()[row1]
         print("#  "+line)
         print("Row "+row1+" printed")
+
+    if userInput == "4":
+        searchInput = str(input())
+        search_text_in_file(filePath, searchInput)
