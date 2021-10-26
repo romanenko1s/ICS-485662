@@ -13,10 +13,10 @@ while True:
     elif userInput == "1":
         
         print("How to sort it?\n1. By names\n2. By marks\n")
-
         userInput1 = str(input())
           
         if userInput1 == "1":
+
             file1 = open(filePath, "r")
             file2 = file1.readlines()
 
@@ -41,8 +41,8 @@ while True:
 
 
     elif userInput == "2":
-        print("Enter data")
 
+        print("Enter data")
         newData = (str(input())+"\n")
 
         file1 = open(filePath, "a+")
@@ -53,6 +53,7 @@ while True:
 
 
     elif userInput == "3":
+
         print("What row to print?")
         row1 = int(input())
 
@@ -62,6 +63,7 @@ while True:
 
 
     elif userInput == "4":
+
         print("Enter a key word to search for")
         searchInput = str(input())
 
