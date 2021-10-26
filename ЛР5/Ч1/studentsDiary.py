@@ -10,7 +10,7 @@ while True:
         break
 
 
-    if userInput == "1":
+    elif userInput == "1":
         
         print("How to sort it?\n1. By names\n2. By marks\n")
 
@@ -26,23 +26,18 @@ while True:
             print("List printed\n")
 
         elif userInput1 == "2":
-            file1 = open(filePath, "r")
-            file2 = file1.readlines()
-            
-            #students = {}
-            #for row in file2:
-            #    students.append(row)
 
-            #print(students)
+            studentsList= {}
+            file1 = open(filePath)
 
-            a_dictionary = {}
-            a_file = open(filePath)
-            for line in a_file:
+            for line in file1:
                 key, value = line.split()
-                a_dictionary[key] = value
+                studentsList[key] = value
 
-            print(a_dictionary)
+            studentsListSorted = dict(sorted(studentsList.items(), key=lambda item: item[1], reverse = True))
 
+            for student in studentsListSorted:
+                print(student)
 
     elif userInput == "2":
         print("Enter data")
@@ -65,7 +60,7 @@ while True:
         print("Row "+str(row1)+" printed\n")
 
 
-    if userInput == "4":
+    elif userInput == "4":
         print("Enter a key word to search for")
         searchInput = str(input())
 
