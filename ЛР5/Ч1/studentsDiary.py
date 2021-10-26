@@ -39,6 +39,7 @@ while True:
             for student in studentsListSorted:
                 print(student)
 
+
     elif userInput == "2":
         print("Enter data")
 
