@@ -27,8 +27,9 @@ while True:
 
         elif userInput1 == "2":
 
-            studentsList= {}
             file1 = open(filePath)
+
+            studentsList= {}
 
             for line in file1:
                 key, value = line.split()
