@@ -6,10 +6,15 @@ class Book():
         self.genre = genre
         self.publicationYear = publicationYear
 
+    def getBook(self, name):
+        book = open(name+"txt", "r")
+
+### DATA ###
+
 book1 = Book("The Machinery of Freedom", "David Friedman", "Science", "1973")
 book2 = Book("Das Capital", "Karl MArx", "Fiction", "1867")
-
-
+book3 = Book()
+#### ---- ###
 
 print("The Home Library welcomes you")
 
