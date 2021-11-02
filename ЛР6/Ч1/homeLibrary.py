@@ -13,7 +13,8 @@ class Book():
 
 book1 = Book("The Machinery of Freedom", "David Friedman", "Science", "1973")
 book2 = Book("Das Capital", "Karl MArx", "Fiction", "1867")
-book3 = Book()
+book3 = Book("Robinson Crusoe", "Daniel Defoe", "Adventure", "1719")
+
 #### ---- ###
 
 print("The Home Library welcomes you")
