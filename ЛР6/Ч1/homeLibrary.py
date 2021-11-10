@@ -1,24 +1,20 @@
-class Book():
+import pandas as pd
+dataFile = "dataFileHomeLibrary.txt"
 
-    def __init__(self, name, author, genre, publicationYear):
+
+class Library():
+
+    books = []
+
+    def __init__(self, name, author, genre, year):
         self.name = name
         self.author = author
         self.genre = genre
-        self.publicationYear = publicationYear
+        self.year = year
+        
 
-    def getInfo(self):
-        print(self.name, self.author, self.genre, self.publicationYear)
+print(Library.books)
 
-    def getBook(self, name):
-        book = open(name+"txt", "r")
-
-### DATA ###
-
-book1 = Book("The Machinery of Freedom", "David Friedman", "Science", "1973")
-book2 = Book("Das Capital", "Karl Marx", "Fiction", "1867")
-book3 = Book("Robinson Crusoe", "Daniel Defoe", "Adventure", "1719")
-
-#### ---- ###
 
 print("The Home Library welcomes you")
 
@@ -33,33 +29,22 @@ while True:
 
 
     elif userInput == "1":
-        print(book1.getInfo())
-        print(book2.getInfo())
-        print(book3.getInfo())
+        library1 = pd.read_csv(dataFile)
+        print(library1.to_string()+"\n")
         
 
     elif userInput == "2":
 
-        print("How to search a book?\n1. By name\n2. By author\n3. By genre\n4. By year of publication\n0. Cancel curent action")
-        userInput1 = str(input())
+        print("Enter keyword to search\n")
+        keyWord1 = str(input())
 
-        if userInput1 == "0":
-            print("Action cancaled\n")
-
-        elif userInput1 == "1":
-            print("Enter keyword to search\n")
-
-        elif userInput1 == "2":
-            print("Enter keyword to search\n")
-
-        elif userInput1 == "3":
-            print("Enter keyword to search\n")
-
-        elif userInput1 == "4":
-            print("Enter keyword to search\n")
-        
-        else:
-            print("Invalid Input1\n")
+        file4 = open(dataFile, "r+").readlines()
+        for line in file4:
+            Library.books.append(line)
+            
+        for book1 in Library.books:
+            if keyWord1 in book1:
+                print(book1)
 
 
     else:
