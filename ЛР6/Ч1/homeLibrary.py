@@ -6,13 +6,16 @@ class Book():
         self.genre = genre
         self.publicationYear = publicationYear
 
+    def getInfo(self):
+        print(self.name, self.author, self.genre, self.publicationYear)
+
     def getBook(self, name):
         book = open(name+"txt", "r")
 
 ### DATA ###
 
 book1 = Book("The Machinery of Freedom", "David Friedman", "Science", "1973")
-book2 = Book("Das Capital", "Karl MArx", "Fiction", "1867")
+book2 = Book("Das Capital", "Karl Marx", "Fiction", "1867")
 book3 = Book("Robinson Crusoe", "Daniel Defoe", "Adventure", "1719")
 
 #### ---- ###
@@ -30,8 +33,10 @@ while True:
 
 
     elif userInput == "1":
-        print()
-
+        print(book1.getInfo())
+        print(book2.getInfo())
+        print(book3.getInfo())
+        
 
     elif userInput == "2":
 
