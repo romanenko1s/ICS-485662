@@ -10,7 +10,6 @@ column = column.insert(4, ("Рік"))
 
 dataFile = pd.DataFrame([
     A*3,
-    E,
 ], column).T
 
 print(dataFile)
