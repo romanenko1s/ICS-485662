@@ -1,4 +1,4 @@
-words = open('textForWordSearcher.txt').read().lower().split()
+words = open("/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/ЛР5/Ч2/textForWordSearcher.txt").read().lower().split()
 
 uniques = []
 for word in words:
