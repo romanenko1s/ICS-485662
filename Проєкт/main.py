@@ -16,10 +16,13 @@ dataFile = str(dataFile2)
 ### WORKING WITH THE APP ###
 
 class Ui_MainWindow(object):
+
     def setupUi(self, MainWindow):
+
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(603, 427)
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.title = QtWidgets.QLabel(self.centralwidget)
@@ -34,6 +37,7 @@ class Ui_MainWindow(object):
         self.title.setStyleSheet("background-color: rgb(245, 194, 17);")
         self.title.setAlignment(QtCore.Qt.AlignCenter)
         self.title.setObjectName("title")
+
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(225, 100, 150, 40))
         self.pushButton.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
@@ -54,6 +58,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setGeometry(QtCore.QRect(225, 300, 150, 40))
         self.pushButton_5.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_5.setObjectName("pushButton_5")
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 603, 22))
@@ -78,6 +83,8 @@ class Ui_MainWindow(object):
 
     def button3Action(self):
             print("hello")
+
+### STARTING APP ###
 
 if __name__ == "__main__":
     import sys
