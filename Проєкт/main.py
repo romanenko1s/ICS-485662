@@ -42,18 +42,23 @@ class Ui_MainWindow(object):
         self.pushButton.setGeometry(QtCore.QRect(225, 100, 150, 40))
         self.pushButton.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton.setObjectName("pushButton")
+
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(225, 150, 150, 40))
         self.pushButton_2.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_2.setObjectName("pushButton_2")
+
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(225, 200, 150, 40))
         self.pushButton_3.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_3.setObjectName("pushButton_3")
+        
+
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_4.setGeometry(QtCore.QRect(225, 250, 150, 40))
         self.pushButton_4.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_4.setObjectName("pushButton_4")
+
         self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_5.setGeometry(QtCore.QRect(225, 300, 150, 40))
         self.pushButton_5.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
@@ -82,7 +87,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", "Вихід"))
 
     def button3Action(self):
-            print("hello")
+        plt.show()
 
 ### STARTING APP ###
 
