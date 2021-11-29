@@ -1,17 +1,22 @@
 import pandas as pd
-import matplotlib as ml
+from matplotlib import *
 import matplotlib.pyplot as plt
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
+import xlrd
 
 ### WORKING WITH DATA BASES ###
 
-excelPath = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData.xls"
+excelPath1 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData.xls"
+excelPath2 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData (copy).xls"
 
-dataFile1 = pd.read_excel(excelPath)
-dataFile2 = pd.DataFrame(dataFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
-dataFile = str(dataFile2)
+dataExcelFile1 = pd.read_excel(excelPath1)
+dataExcelFile12 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
+dataFile = str(dataExcelFile12)
+
+
+
 
 ### WORKING WITH THE APP ###
 
@@ -52,7 +57,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setGeometry(QtCore.QRect(225, 200, 150, 40))
         self.pushButton_3.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_3.setObjectName("pushButton_3")
-        
+        self.pushButton_3.clicked.connect(self.button3Action)
 
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_4.setGeometry(QtCore.QRect(225, 250, 150, 40))
@@ -87,7 +92,26 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", "Вихід"))
 
     def button3Action(self):
+
+        dataExcelFile2 = pd.read_excel(excelPath2)
+        y1 = dataExcelFile2.iloc[0]
+        plt.plot(y1)
+        y2 = dataExcelFile2.iloc[1]
+        plt.plot(y2)
+        y3 = dataExcelFile2.iloc[2]
+        plt.plot(y3)
+        y4 = dataExcelFile2.iloc[3]
+        plt.plot(y4)
+        y5 = dataExcelFile2.iloc[4]
+        plt.plot(y5)
+        y6 = dataExcelFile2.iloc[5]
+        plt.plot(y6)
+
         plt.show()
+
+    def button4Action(self):
+
+        pass
 
 ### STARTING APP ###
 
