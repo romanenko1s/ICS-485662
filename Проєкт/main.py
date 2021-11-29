@@ -15,10 +15,11 @@ dataExcelFile1 = pd.read_excel(excelPath1)
 dataExcelFile12 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
 dataFile = str(dataExcelFile12)
 
+### MINOR WINDOWS ###
 
 
 
-### WORKING WITH THE APP ###
+### WORKING WITH THE MAIN WINDOW ###
 
 class Ui_MainWindow(object):
 
@@ -47,11 +48,13 @@ class Ui_MainWindow(object):
         self.pushButton.setGeometry(QtCore.QRect(225, 100, 150, 40))
         self.pushButton.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton.setObjectName("pushButton")
+        #self.pushButton.clicked.connect(self.button1Action)
 
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(225, 150, 150, 40))
         self.pushButton_2.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_2.setObjectName("pushButton_2")
+        #self.pushButton_2.clicked.connect(self.button2Action)
 
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(225, 200, 150, 40))
@@ -63,6 +66,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.setGeometry(QtCore.QRect(225, 250, 150, 40))
         self.pushButton_4.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_4.setObjectName("pushButton_4")
+        #self.pushButton_4.clicked.connect(self.button4Action)
 
         self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_5.setGeometry(QtCore.QRect(225, 300, 150, 40))
@@ -91,6 +95,12 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText(_translate("MainWindow", "Вивести в ексель"))
         self.pushButton_5.setText(_translate("MainWindow", "Вихід"))
 
+    def button1Action(self):
+        pass
+
+    def button2Action(self):
+        pass
+
     def button3Action(self):
 
         dataExcelFile3 = pd.read_excel(excelPath3)
@@ -108,15 +118,13 @@ class Ui_MainWindow(object):
         plt.plot(y6)
 
         plt.show()
-
+    
     def button4Action(self):
-
         pass
 
 ### STARTING APP ###
 
 if __name__ == "__main__":
-    import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
