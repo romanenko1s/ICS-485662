@@ -72,6 +72,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setGeometry(QtCore.QRect(225, 300, 150, 40))
         self.pushButton_5.setStyleSheet("background-color: rgb(246, 245, 244);\n""color: rgb(0, 0, 0);")
         self.pushButton_5.setObjectName("pushButton_5")
+        self.pushButton_5.clicked.connect(self.close)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -132,6 +133,9 @@ class Ui_MainWindow(object):
     
     def button4Action(self):
         pass
+    
+    def close(self):
+        QApplication.closeAllWindows()
 
 ### STARTING APP ###
 
