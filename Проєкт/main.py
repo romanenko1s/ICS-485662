@@ -3,7 +3,7 @@ from matplotlib import *
 import matplotlib.pyplot as plt
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 import xlrd
 
 ### WORKING WITH DATA BASES ###
@@ -132,8 +132,14 @@ class Ui_MainWindow(object):
         plt.show()
     
     def button4Action(self):
-        pass
-    
+        fname = QFileDialog.getSaveFileName(self)[0]
+        try:
+            f = open(fname, "w")
+            f.write(dataFile)
+            f.close()
+        except:
+            pass
+
     def close(self):
         QApplication.closeAllWindows()
 
