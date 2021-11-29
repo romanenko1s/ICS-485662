@@ -105,18 +105,24 @@ class Ui_MainWindow(object):
 
         dataExcelFile3 = pd.read_excel(excelPath3)
         y1 = dataExcelFile3.iloc[0]
-        plt.plot(y1)
         y2 = dataExcelFile3.iloc[1]
-        plt.plot(y2)
         y3 = dataExcelFile3.iloc[2]
-        plt.plot(y3)
         y4 = dataExcelFile3.iloc[3]
-        plt.plot(y4)
         y5 = dataExcelFile3.iloc[4]
-        plt.plot(y5)
         y6 = dataExcelFile3.iloc[5]
-        plt.plot(y6)
+        plt.plot(y1, label = u'103')
+        plt.plot(y2, label = u'104')
+        plt.plot(y3, label = u'105')
+        plt.plot(y4, label = u'106')
+        plt.plot(y5, label = u'109')
+        plt.plot(y6, label = u'111')
 
+        plt.title("Курс Валют")
+        plt.ylabel("Курс відносно гривні")
+        plt.xlabel("Дата")
+
+        plt.grid()
+        plt.legend() 
         plt.show()
     
     def button4Action(self):
