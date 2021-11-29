@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        
+
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Зараз"))
         self.title.setText(_translate("MainWindow", "Зараз"))
@@ -104,27 +104,30 @@ class Ui_MainWindow(object):
 
     def button3Action(self):
         dataExcelFile3 = pd.read_excel(excelPath3)
-        y1 = dataExcelFile3.iloc[0]
 
+        # Here we read each row in the excel sheet
+        y1 = dataExcelFile3.iloc[0]
         y2 = dataExcelFile3.iloc[1]
         y3 = dataExcelFile3.iloc[2]
         y4 = dataExcelFile3.iloc[3]
         y5 = dataExcelFile3.iloc[4]
         y6 = dataExcelFile3.iloc[5]
 
+        # Here we add each row to graph
         plt.plot(y1, label = u'103')
         plt.plot(y2, label = u'104')
         plt.plot(y3, label = u'105')
         plt.plot(y4, label = u'106')
         plt.plot(y5, label = u'109')
         plt.plot(y6, label = u'111')
-
+       
+        # The decoration section
         plt.title("Курс Валют")
         plt.ylabel("Курс відносно гривні")
         plt.xlabel("Дата")
-
         plt.grid()
-        plt.legend() 
+        plt.legend()
+
         plt.show()
     
     def button4Action(self):
