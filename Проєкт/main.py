@@ -93,7 +93,7 @@ def saveExcelFile():
         f.write(dataFile)
         f.close()
     except:
-        pass
+        print("error37")
 
 def close():
     QApplication.closeAllWindows()
@@ -103,6 +103,7 @@ def close():
 ui.menuPushButton_1.clicked.connect(openFirstWindow)
 ui.menuPushButton_2.clicked.connect(openSecondWindow)
 ui.menuPushButton_3.clicked.connect(drawGraph)
+ui.menuPushButton_4.clicked.connect(saveExcelFile)
 ui.menuPushButton_5.clicked.connect(close)
 
 ### EXIT THE APP ###
