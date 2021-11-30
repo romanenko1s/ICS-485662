@@ -16,6 +16,7 @@ class Ui_window1(object):
         window1.setObjectName("window1")
         window1.resize(600, 400)
         window1.setStyleSheet("background-color: rgb(36, 31, 49);")
+
         self.label = QtWidgets.QLabel(window1)
         self.label.setGeometry(QtCore.QRect(0, 0, 600, 50))
         font = QtGui.QFont()
@@ -27,6 +28,7 @@ class Ui_window1(object):
 "background-color: rgb(0, 0, 0);")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
+
         self.window1PushButton_1 = QtWidgets.QPushButton(window1)
         self.window1PushButton_1.setGeometry(QtCore.QRect(0, 0, 100, 50))
         font = QtGui.QFont()
@@ -36,6 +38,18 @@ class Ui_window1(object):
         self.window1PushButton_1.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 0, 0);")
         self.window1PushButton_1.setObjectName("window1PushButton_1")
+        
+        self.label2 = QtWidgets.QLabel(window1)
+        self.label2.setGeometry(QtCore.QRect(0, 50, 600, 350))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label2.setFont(font)
+        self.label2.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(36, 31, 49);")
+        self.label2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label2.setObjectName("label2")
 
         self.retranslateUi(window1)
         QtCore.QMetaObject.connectSlotsByName(window1)
@@ -45,3 +59,5 @@ class Ui_window1(object):
         window1.setWindowTitle(_translate("window1", "Dialog"))
         self.label.setText(_translate("window1", "Курс Валют"))
         self.window1PushButton_1.setText(_translate("window1", "Меню"))
+        self.label2.setText(_translate("window1", "Таблиця"))
+
