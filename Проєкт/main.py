@@ -9,14 +9,21 @@ from menu import Ui_nowMenu
 from window1 import Ui_window1
 from window2 import Ui_window2
 
-### WORKING WITH DATA BASES ###
+### CHOOSING PATH TO EXCEL FILES ###
 
 excelPath1 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData.xls"
+excelPath2 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData2.xls"
 excelPath3 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData3.xls"
+
+### WORKING WITH DATA BASES ###
 
 dataExcelFile1 = pd.read_excel(excelPath1)
 dataExcelFile12 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
-dataFile = str(dataExcelFile12)
+dataFile1 = str(dataExcelFile12)
+
+dataExcelFile2 = pd.read_excel(excelPath2)
+dataExcelFile22 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6])
+dataFile2 = str(dataExcelFile22)
 
 ### STARTING APP ###
 
@@ -37,6 +44,8 @@ def openFirstWindow():
     nowMenu.close()
     window1.show()
 
+    ui.label2.setText(dataFile1)
+
     def returnToMain1():
         window1.close()
         nowMenu.show()
@@ -50,6 +59,8 @@ def openSecondWindow():
     ui.setupUi(window2)
     nowMenu.close()
     window2.show()
+
+    ui.label2.setText(dataFile2)
 
     def returnToMain2():
         window2.close()
@@ -88,9 +99,10 @@ def drawGraph():
 
 def saveExcelFile():
     fname = QFileDialog.getSaveFileName()[0]
+    print(fname)
     try:
         f = open(fname, "w")
-        f.write(dataFile)
+        f.write(dataFile1)
         f.close()
     except:
         print("error37")
