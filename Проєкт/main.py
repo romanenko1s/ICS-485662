@@ -11,12 +11,14 @@ from window2 import Ui_window2
 
 ### CHOOSING PATH TO EXCEL FILES ###
 
+# Those nees to change before stating app to your actual path to 3 excel files
 excelPath1 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData.xls"
 excelPath2 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData2.xls"
 excelPath3 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData3.xls"
 
 ### WORKING WITH DATA BASES ###
 
+# Here we conwert first and second excel file to string
 dataExcelFile1 = pd.read_excel(excelPath1)
 dataExcelFile12 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
 dataFile1 = str(dataExcelFile12)
@@ -27,6 +29,7 @@ dataFile2 = str(dataExcelFile22)
 
 ### STARTING APP ###
 
+# Here we start the main menu
 app = QtWidgets.QApplication(sys.argv)
 nowMenu = QtWidgets.QDialog()
 ui = Ui_nowMenu()
@@ -36,6 +39,7 @@ nowMenu.show()
 
 ### DECLARING FUNCTIONS ###
 
+# This function opens window with first data base
 def openFirstWindow():
     global window1
     window1 = QtWidgets.QDialog()
@@ -44,14 +48,19 @@ def openFirstWindow():
     nowMenu.close()
     window1.show()
 
+    # Here we print first excel table 
     ui.label2.setText(dataFile1)
 
+    # This function returns us to the first window
     def returnToMain1():
         window1.close()
         nowMenu.show()
-
+    
+    # Here we connect return function to the button
     ui.window1PushButton_1.clicked.connect(returnToMain1)
 
+# This function opens window with second data base
+# Code is identical to the first one
 def openSecondWindow():
     global window2
     window2 = QtWidgets.QDialog()
@@ -68,7 +77,9 @@ def openSecondWindow():
 
     ui.window2PushButton_1.clicked.connect(returnToMain2)
 
+# This function draws a graph out of third excel file
 def drawGraph():
+    # Here we open the third excel file
     dataExcelFile3 = pd.read_excel(excelPath3)
 
     # Here we read each row in the excel sheet
@@ -88,29 +99,35 @@ def drawGraph():
     plt.plot(y6, label = u'111')
     
     # The decoration section
-    plt.title("Курс Валют")
-    plt.ylabel("Курс відносно гривні")
-    plt.xlabel("Дата")
-    plt.grid()
-    plt.legend()
+    plt.title("Курс Валют")            # Add title
+    plt.ylabel("Курс відносно гривні") # Add description to Y axis
+    plt.xlabel("Дата")                 # Add description to X axis
+    plt.grid()                         # Add grid
+    plt.legend()                       # Add legend(description of each graph)
 
+    # Draw the graph
     plt.show()
 
+# This function saves first excel file into your computer
 def saveExcelFile():
+    # Open the saving menu to create the new file
     fname = QFileDialog.getSaveFileName()[0]
-    print(fname)
+
+    # Here we open the new file and add data from first excel file
     try:
         f = open(fname, "w")
         f.write(dataFile1)
         f.close()
     except:
-        print("error37")
+        pass
 
+# This fun
 def close():
     QApplication.closeAllWindows()
 
 ### CONECTING FUNCTIONS TO APP ###
 
+# Here we connect functions to the menu buttons
 ui.menuPushButton_1.clicked.connect(openFirstWindow)
 ui.menuPushButton_2.clicked.connect(openSecondWindow)
 ui.menuPushButton_3.clicked.connect(drawGraph)
