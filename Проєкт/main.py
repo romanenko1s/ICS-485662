@@ -24,7 +24,7 @@ dataExcelFile12 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12
 dataFile1 = str(dataExcelFile12)
 
 dataExcelFile2 = pd.read_excel(excelPath2)
-dataExcelFile22 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6])
+dataExcelFile22 = pd.DataFrame(dataExcelFile2, index=[1,2,3,4,5])
 dataFile2 = str(dataExcelFile22)
 
 ### STARTING APP ###
