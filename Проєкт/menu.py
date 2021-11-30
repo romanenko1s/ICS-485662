@@ -83,7 +83,7 @@ class Ui_nowMenu(object):
         self.menuPushButton_1.setText(_translate("nowMenu", "Курс Валют"))
         self.menuPushButton_2.setText(_translate("nowMenu", "Номера Валют"))
         self.menuPushButton_3.setText(_translate("nowMenu", "Графік Валют"))
-        self.menuPushButton_4.setText(_translate("nowMenu", "Вивести в ексель"))
+        self.menuPushButton_4.setText(_translate("nowMenu", "Зберегти таблицю"))
         self.menuPushButton_5.setText(_translate("nowMenu", "Вийти"))
 
 
