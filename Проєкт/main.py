@@ -17,13 +17,14 @@ excelPath3 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/
 dataExcelFile1 = pd.read_excel(excelPath1)
 dataExcelFile12 = pd.DataFrame(dataExcelFile1, index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17])
 dataFile = str(dataExcelFile12)
+
 ### STARTING APP ###
 
 app = QtWidgets.QApplication(sys.argv)
-
 nowMenu = QtWidgets.QDialog()
 ui = Ui_nowMenu()
 ui.setupUi(nowMenu)
+
 nowMenu.show()
 
 ### DECLARING FUNCTIONS ###
@@ -107,6 +108,3 @@ ui.menuPushButton_5.clicked.connect(close)
 ### EXIT THE APP ###
 
 sys.exit(app.exec_())
-
-### DECLARING FUNCTIONS ###
-
