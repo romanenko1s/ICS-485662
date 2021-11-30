@@ -37,6 +37,18 @@ class Ui_window2(object):
 "background-color: rgb(0, 0, 0);")
         self.window2PushButton_1.setObjectName("window2PushButton_1")
 
+        self.label2 = QtWidgets.QLabel(window2)
+        self.label2.setGeometry(QtCore.QRect(0, 50, 600, 350))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label2.setFont(font)
+        self.label2.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(36, 31, 49);")
+        self.label2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label2.setObjectName("label2")
+
         self.retranslateUi(window2)
         QtCore.QMetaObject.connectSlotsByName(window2)
 
@@ -45,3 +57,4 @@ class Ui_window2(object):
         window2.setWindowTitle(_translate("window2", "Dialog"))
         self.label.setText(_translate("window2", "Номера Валют"))
         self.window2PushButton_1.setText(_translate("window2", "Меню"))
+        self.label2.setText(_translate("window2", "Таблиця"))
