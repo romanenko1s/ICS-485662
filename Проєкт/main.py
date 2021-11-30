@@ -68,7 +68,6 @@ def openSecondWindow():
 
     ui.window2PushButton_1.clicked.connect(returnToMain2)
 
-
 def drawGraph():
     dataExcelFile3 = pd.read_excel(excelPath3)
 
