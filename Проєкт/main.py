@@ -10,9 +10,9 @@ from window2 import Ui_window2
 ### CHOOSING PATH TO EXCEL FILES ###
 
 # Those need to be changed before stating app to your actual path to 3 excel files
-excelPath1 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData.xls"
-excelPath2 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData2.xls"
-excelPath3 = "/home/user/GitHub/romanenko1s/romanenko1s/ICS-485662/Проєкт/curencyData3.xls"
+excelPath1 = "/home/user/GitHub/romanenko1s/ICS-485662/Проєкт/curencyData.xls"
+excelPath2 = "/home/user/GitHub/romanenko1s/ICS-485662/Проєкт/curencyData2.xls"
+excelPath3 = "/home/user/GitHub/romanenko1s/ICS-485662/Проєкт/curencyData3.xls"
 
 ### WORKING WITH DATA BASES ###
 
