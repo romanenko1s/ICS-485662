@@ -1,10 +1,8 @@
 import pandas as pd
-from matplotlib import *
 import matplotlib.pyplot as plt
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
-import xlrd
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QApplication, QFileDialog
 from menu import Ui_nowMenu
 from window1 import Ui_window1
 from window2 import Ui_window2
